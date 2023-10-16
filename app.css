@@ -1,0 +1,68 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.boule{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255,153,34);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    
+    display: inline-block;
+    width: 0;
+    height: 0;
+    
+    
+    border-right:  .3em solid transparent;
+    border-bottom: .7em  solid red;
+    border-left:   .3em solid transparent;
+  
+    /* Controlls the size of the stars. */
+    font-size: 24px;
+    
+}
+.star:before, .star:after {
+  content: '';
+  
+  display: block;
+  width: 0;
+  height: 0;
+  
+  position: absolute;
+  top: .6em;
+  left: -1em;
+
+  border-right:  1em solid transparent;
+  border-bottom: .7em  solid rgb(237, 72, 72);
+  border-left:   1em solid transparent;
+
+  transform: rotate(-35deg);
+}
+
+.star:after {  
+  transform: rotate(35deg);
+}
+
+.reflet{
+    position:absolute;
+    top: 15%;
+    left: 15%;
+    transform: rotate(35deg);
+    width:50px;
+    height:50px;
+    background: white;
+    filter: blur(16px);
+}
